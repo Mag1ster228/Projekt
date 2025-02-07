@@ -5,12 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twoja Strona</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .contact-info {
+            background: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo img, .user-account img, .cart img {
+            height: 40px;
+        }
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+        }
+        .slide {
+            position: relative;
+            width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+        .slide-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: #ffffff;
+        }
+        .feature {
+            text-align: center;
+        }
+        .scroll-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .scroll-button button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .scroll-button button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <!-- Sekcja z telefonem i e-mailem -->
     <div class="contact-info">
-        <a href="tel:+48123456789">📞 +48 123 456 789</a> |
-        <a href="mailto:email@example.com">📧 email@example.com</a>
+        <a href="tel:+48123456789" style="color: white;">📞 +48 123 456 789</a> |
+        <a href="mailto:email@example.com" style="color: white;">📧 email@example.com</a>
     </div>
 
     <!-- Logo, wyszukiwarka, konto użytkownika, koszyk -->
