@@ -35,13 +35,15 @@
             border-radius: 5px;
         }
         .slider {
-            width: 100%;
-            overflow: hidden;
-            display: flex;
-        }
-        .slide {
             position: relative;
             width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            position: relative;
         }
         .slide img {
             width: 100%;
@@ -55,6 +57,9 @@
             color: white;
             padding: 10px;
             border-radius: 5px;
+        }
+        .active {
+            display: block;
         }
         .features {
             display: flex;
@@ -109,7 +114,7 @@
 
     <!-- Slider -->
     <section class="slider">
-        <div class="slide">
+        <div class="slide active">
             <img src="image1.jpg" alt="Obrazek 1">
             <div class="slide-text">
                 <h2>Nowa Kolekcja 2024</h2>
@@ -121,6 +126,13 @@
             <div class="slide-text">
                 <h2>Stylowe Nowości</h2>
                 <button>Sprawdź teraz</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="image3.jpg" alt="Obrazek 3">
+            <div class="slide-text">
+                <h2>Najlepsze Promocje</h2>
+                <button>Kup teraz</button>
             </div>
         </div>
     </section>
@@ -150,6 +162,14 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+        let index = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.classList.remove("active"));
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
+        setInterval(showSlides, 3000);
     </script>
 </body>
 </html>
