@@ -51,7 +51,7 @@ button {margin-top:10px; padding:5px;}
 <li>Pierścień</li>
 </ul>
 <iframe width="300" height="200"
-src="https://www.youtube.com/embed/3QhU9jd03a0"
+src=""
 title="Topologie"></iframe>
 </section>
 
